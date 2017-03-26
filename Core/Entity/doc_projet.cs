@@ -3,9 +3,11 @@ namespace core
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class doc_projet
     {
+        [Key]
         public int ID_DOC { get; set; }
         public int ID_PROJET { get; set; }
         public string NUM_DOC { get; set; }

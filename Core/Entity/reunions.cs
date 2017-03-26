@@ -3,14 +3,16 @@ namespace core
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class reunions
     {
         public reunions()
         {
             this.action = new HashSet<action>();
         }
-    
+
+        [Key]
         public int ID_REUNION { get; set; }
         public Nullable<int> ID_PROJET { get; set; }
         public string DESIGNATION { get; set; }

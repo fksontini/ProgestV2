@@ -2,7 +2,8 @@ namespace core
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class taches
     {
         public taches()
@@ -15,7 +16,7 @@ namespace core
             this.tache_logistique = new HashSet<tache_logistique>();
             this.tache_materiel = new HashSet<tache_materiel>();
         }
-    
+        [Key]
         public int ID_TACHE { get; set; }
         public Nullable<int> ID_MODULE { get; set; }
         public Nullable<int> ID_SPRINT { get; set; }

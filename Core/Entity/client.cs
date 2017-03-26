@@ -3,14 +3,15 @@ namespace core
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class client
     {
         public client()
         {
             this.projet = new HashSet<projet>();
         }
-    
+        [Key]
         public string MATRICULE { get; set; }
         public string NOM { get; set; }
         public string PRENOM { get; set; }

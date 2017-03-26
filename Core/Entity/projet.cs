@@ -3,7 +3,8 @@ namespace core
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class projet
     {
         public projet()
@@ -12,7 +13,8 @@ namespace core
             this.modules = new HashSet<modules>();
             this.reunions = new HashSet<reunions>();
         }
-    
+
+        [Key]
         public int ID_PROJET { get; set; }
         public string MATRICULE { get; set; }
         public int ID_USER { get; set; }

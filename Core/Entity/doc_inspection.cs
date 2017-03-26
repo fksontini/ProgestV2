@@ -3,9 +3,11 @@ namespace core
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class doc_inspection
     {
+        [Key]
         public int ID_DOC { get; set; }
         public int ID_TACHE { get; set; }
         public string NUM_DOC { get; set; }

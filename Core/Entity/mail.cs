@@ -3,11 +3,13 @@ namespace core
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class mail
     {
         public int ID_USER { get; set; }
         public int UTI_ID_USER { get; set; }
+        [Key]
         public int ID_MSG { get; set; }
         public string SUJET { get; set; }
         public Nullable<int> DESTINATAIRE { get; set; }

@@ -3,7 +3,8 @@ namespace core
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class utilisateur
     {
         public utilisateur()
@@ -14,7 +15,7 @@ namespace core
             this.mail1 = new HashSet<mail>();
             this.projet = new HashSet<projet>();
         }
-    
+        [Key]
         public int ID_USER { get; set; }
         public int ID_ROLE { get; set; }
         public string MATRICULE { get; set; }
